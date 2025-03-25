@@ -1,0 +1,21 @@
+[project]
+name = "axiom_jupyter_notebook_ext"
+version = "0.1.0"
+description = "A jupyter notebook experience for Axiom"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "axiom-py>=0.8.1",
+    "ipython>=9.0.2",
+    "ipywidgets>=8.1.5",
+    "itables>=2.2.5",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "pathlib>=1.0.1",
+    "toml>=0.10.2",
+    "typing>=3.10.0.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
