@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: axiom_jupyter_notebook_ext
+Version: 0.1.0
+Summary: An AI-powered Jupyter notebook experience for Axiom using Anthropic Claude
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: axiom-py>=0.8.1
+Requires-Dist: ipython>=9.0.2
+Requires-Dist: ipywidgets>=8.1.5
+Requires-Dist: itables>=2.2.5
+Requires-Dist: numpy>=2.2.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pathlib>=1.0.1
+Requires-Dist: toml>=0.10.2
+Requires-Dist: typing>=3.10.0.0
+Requires-Dist: anthropic>=0.14.0
+Requires-Dist: matplotlib>=3.7.2
+Requires-Dist: aiohttp>=3.9.1
+Requires-Dist: asyncio>=3.4.3
+
+** axiom_jupyter_notebook_ext
+
+## Build
+
+```shell
+uv build
+```
+
+## Run Jupyter ( cli, vscode, cursor, ... )
+
+```shell
+pip install jupyter
+jupyter notebook
+```
+
+It will provide a localhost url, connect to that endpoint in a browser
+
+## Quick start
+
+Check out the ['quickstart notebook']('./quickstart.ipynb') for basic ipython magic supported in the integration.

@@ -1,9 +1,9 @@
 [project]
 name = "axiom_jupyter_notebook_ext"
 version = "0.1.0"
-description = "A jupyter notebook experience for Axiom"
+description = "An AI-powered Jupyter notebook experience for Axiom using Anthropic Claude"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = [
     "axiom-py>=0.8.1",
     "ipython>=9.0.2",
@@ -14,6 +14,10 @@ dependencies = [
     "pathlib>=1.0.1",
     "toml>=0.10.2",
     "typing>=3.10.0.0",
+    "anthropic>=0.14.0",
+    "matplotlib>=3.7.2",
+    "aiohttp>=3.9.1",
+    "asyncio>=3.4.3",
 ]
 
 [build-system]

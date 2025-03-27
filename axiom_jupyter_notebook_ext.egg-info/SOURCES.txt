@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+axiom_jupyter_notebook_ext/insights.py
+axiom_jupyter_notebook_ext/jupyter_axiom_extension.py
+axiom_jupyter_notebook_ext/mcp_agent.py
+axiom_jupyter_notebook_ext/nlq.py
+axiom_jupyter_notebook_ext/predictive_analytics.py
+axiom_jupyter_notebook_ext.egg-info/PKG-INFO
+axiom_jupyter_notebook_ext.egg-info/SOURCES.txt
+axiom_jupyter_notebook_ext.egg-info/dependency_links.txt
+axiom_jupyter_notebook_ext.egg-info/requires.txt
+axiom_jupyter_notebook_ext.egg-info/top_level.txt
+axiom_jupyter_notebook_ext/utils/__init__.py
+axiom_jupyter_notebook_ext/utils/auth.py
+axiom_jupyter_notebook_ext/utils/dataframe.py
+axiom_jupyter_notebook_ext/utils/display.py

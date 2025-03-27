@@ -482,13 +482,32 @@ def load_ipython_extension(ipython):
 
     # Add axiom to user namespace for direct access
     ipython.push({"axiom": axiom_extension})
-
-    # TODO Consider auto auth if AXIOM_PROFILE is set for convenience
+    
+    # Load AI extensions if API keys are available
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        try:
+            # Import and load NLQ magic
+            from .nlq import load_nlq_magic
+            load_nlq_magic(ipython)
+            
+            # Import and load insights magic
+            from .insights import load_insights_magic 
+            load_insights_magic(ipython)
+            
+            # Import and load predictive analytics
+            from .predictive_analytics import load_predictive_analytics
+            load_predictive_analytics(ipython)
+            
+            # Import and load MCP agent if MCP_SERVER_URL is set
+            if os.environ.get("MCP_SERVER_URL"):
+                from .mcp_agent import load_mcp_agent
+                load_mcp_agent(ipython)
+                print("All Claude AI features loaded (NLQ, Insights, Predictive Analytics, MCP Agent)")
+            else:
+                print("Claude AI features loaded (NLQ, Insights, Predictive Analytics) - MCP Agent requires MCP_SERVER_URL")
+        except ImportError as e:
+            print(f"Warning: AI extensions not fully loaded: {e}")
+    else:
+        print("AI features not loaded - set ANTHROPIC_API_KEY environment variable to enable")
     
     print("Axiom Extension loaded. Use %axiom_auth to configure authentication.")
-
-
-def unload_ipython_extension(ipython):
-    """Unload the extension"""
-    # Clean up if needed
-    pass
